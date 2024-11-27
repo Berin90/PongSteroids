@@ -7,6 +7,7 @@ namespace PongSteroids
         public Vector2 Position;
         public virtual void Update(float dt) { }
         public virtual void Draw() { }
+        public virtual void Start() { }
 
 
     }

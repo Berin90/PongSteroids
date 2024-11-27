@@ -1,4 +1,5 @@
-﻿using Raylib_cs;
+﻿using PongSteroids;
+using Raylib_cs;
 
 namespace HelloWorld;
 
@@ -10,7 +11,9 @@ class Program
         float x = 100; //player
         float y = 100;
         float speed = 100;
-        
+
+        GameObject ball = new Ball();
+        ball.Start();
 
         while (!Raylib.WindowShouldClose())
         {
@@ -35,6 +38,7 @@ class Program
 
             Rectangle border = new Rectangle(0, 0, 800, 480);
             Raylib.DrawRectangle((int)x, (int)y, 20,80, Color.Black);
+            ball.Draw();
             Raylib.DrawRectangleLinesEx(border, 10, Color.Blue);
 
             Raylib.EndDrawing();
